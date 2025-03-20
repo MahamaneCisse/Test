@@ -28,7 +28,7 @@ export default function Home() {
       <div className="fixed bottom-4 left-0 right-0">
         <form className="p-4 bg-slate-400 max-w-lg" onSubmit={handleSubmit}>
           <fieldset>
-            <textarea name="msg" id="msg"></textarea>
+            <textarea title="message" name="msg" id="msg"></textarea>
             <button type="submit">Gen</button>
           </fieldset>
         </form>
