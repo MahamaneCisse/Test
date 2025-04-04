@@ -31,7 +31,7 @@ export const sendEmail = async ({ email, emailType, userId }: any) => {
       from: "aigen@tec.ai", // sender address
       to: email, // list of receivers
       subject:
-        emailType === "VERIFY" ? "verify your email" : "Reset your password", // Subject line
+        emailType === "VERIFY" ? "Verify your email" : "Reset your password", // Subject line
       text: "mail content", // plain text body
       html: `<p>click <a href="${
         process.env.DOMAIN

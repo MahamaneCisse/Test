@@ -9,6 +9,7 @@ export async function POST(req: NextRequest) {
   try {
     const reqBody = await req.json();
     const { email, password } = reqBody;
+    //validation
     console.log(reqBody);
     const user = await User.findOne({ email });
     if (!user) {
@@ -44,7 +45,7 @@ export async function POST(req: NextRequest) {
     response.cookies.set("token", token, {
       httpOnly: true,
     });
-    return NextResponse.json({ message: "Login successful", success: true });
+    return response;
   } catch (error: any) {
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
